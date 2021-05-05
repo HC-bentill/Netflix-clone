@@ -14,7 +14,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl); // fetch data from the Url provided
-      console.table(request.data.results); // this line represents the data recived from the TMDB api
+      console.table(request.data.results); // this line represents the data recived from the TMDB api (data.results are properties of axios)
       setMovies(request.data.results); // the value of movies has been replaced/updated with data received from the Url
       return request;
     }
